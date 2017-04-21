@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-fluid">
+  <div class="flex">
+    <ng-container *ngFor="let logo of logos; let i = index">
+      <div class="col-xs-1 text-center" [ngStyle]="{ 'order': (i * 2) }">
+        <img class="img-responsive center-block" src="assets/logos/{{ logo }}" [title]="logo" />
+      </div>
+    </ng-container>
+
+    <div class="hero">
+      <h2 style="margin: 0;">The Sharpest Tools</h2>
+      <p style="font-size: xx-small; margin: 2px;">are owned by those with meticulous attention to details.</p>
+    </div>
+  </div>
+</div>
